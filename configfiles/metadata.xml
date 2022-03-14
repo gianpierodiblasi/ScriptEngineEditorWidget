@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+  <ExtensionPackages>
+    <ExtensionPackage 
+      name="PythonEditorWidget"
+      packageVersion="0.9.0"
+      vendor="Accenture Italy - Industry X"
+      description="Extension to show a Python editor"
+      minimumThingWorxVersion="8.3.0"
+      dependsOn="PythonResource:0.13.1"> 
+    </ExtensionPackage>
+  </ExtensionPackages>
+  
+  <Widgets>
+    <Widget name="pythoneditor">
+      <UIResources>
+        <FileResource description="" file="pythoneditor.ide.js" isDevelopment="true" isRuntime="false" type="JS"/>
+        <FileResource description="" file="pythoneditor.ide.css" isDevelopment="true" isRuntime="false" type="CSS"/>
+        <FileResource description="" file="pythoneditor.runtime.js" isDevelopment="false" isRuntime="true" type="JS"/>
+        <FileResource description="" file="pythoneditor.runtime.css" isDevelopment="false" isRuntime="true" type="CSS"/>
+      </UIResources>
+    </Widget>
+  </Widgets>
+</Entities>
