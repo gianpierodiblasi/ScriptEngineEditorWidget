@@ -68,14 +68,20 @@ TW.Runtime.Widgets.pythoneditor = function () {
         value: "",
         language: 'json',
         scrollBeyondLastLine: false,
-        theme: 'vs'
+        theme: 'vs',
+        minimap: {
+          enabled: false
+        }
       });
 
       pythonEditor = monaco.editor.create(document.getElementById('widget-pythoneditor-PythonMonaco_' + uid), {
         value: "",
         language: 'python',
         scrollBeyondLastLine: false,
-        theme: 'vs'
+        theme: 'vs',
+        minimap: {
+          enabled: false
+        }
       });
     } catch (exception) {
       parametersEditor = null;

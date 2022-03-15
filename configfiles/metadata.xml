@@ -3,7 +3,7 @@
   <ExtensionPackages>
     <ExtensionPackage 
       name="PythonEditorWidget"
-      packageVersion="0.9.0"
+      packageVersion="0.10.0"
       vendor="Accenture Italy - Industry X"
       description="Extension to show a Python editor"
       minimumThingWorxVersion="8.3.0"
