@@ -63,6 +63,8 @@ TW.Runtime.Widgets.scriptengineeditor = function () {
   };
 
   function createEditors() {
+    var language = thisWidget.getProperty("language");
+
     try {
       parametersEditor = monaco.editor.create(document.getElementById('widget-scriptengineeditor-ParametersMonaco_' + uid), {
         value: "",
@@ -76,7 +78,7 @@ TW.Runtime.Widgets.scriptengineeditor = function () {
 
       scriptengineEditor = monaco.editor.create(document.getElementById('widget-scriptengineeditor-ScriptEngineMonaco_' + uid), {
         value: "",
-        language: 'python',
+        language: language,
         scrollBeyondLastLine: false,
         theme: 'vs',
         minimap: {
@@ -101,6 +103,8 @@ TW.Runtime.Widgets.scriptengineeditor = function () {
 
   this.updateProperty = function (updatePropertyInfo) {
     if (updatePropertyInfo.TargetProperty === 'debugMode') {
+      this.setProperty(updatePropertyInfo.TargetProperty, updatePropertyInfo.RawSinglePropertyValue);
+    } else if (updatePropertyInfo.TargetProperty === 'language') {
       this.setProperty(updatePropertyInfo.TargetProperty, updatePropertyInfo.RawSinglePropertyValue);
     } else if (updatePropertyInfo.TargetProperty === 'parameters') {
       this.setProperty(updatePropertyInfo.TargetProperty, updatePropertyInfo.RawSinglePropertyValue);

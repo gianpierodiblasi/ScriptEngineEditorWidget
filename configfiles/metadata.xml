@@ -5,9 +5,9 @@
       name="ScriptEngineEditorWidget"
       packageVersion="0.10.0"
       vendor="Accenture Italy - Industry X"
-      description="Extension to show an editor for script code (Python, JavaScript, etc.)"
+      description="Extension to show an editor for scripting code (Python, JavaScript, etc.)"
       minimumThingWorxVersion="8.3.0"
-      dependsOn="ScriptEngineResource:0.13.1"> 
+      dependsOn="ScriptEngineResource:0.15.0"> 
     </ExtensionPackage>
   </ExtensionPackages>
   

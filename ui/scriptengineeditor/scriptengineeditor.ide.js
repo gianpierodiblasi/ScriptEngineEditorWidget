@@ -7,7 +7,7 @@ TW.IDE.Widgets.scriptengineeditor = function () {
   this.widgetProperties = function () {
     return {
       'name': 'ScriptEngineEditor',
-      'description': 'Widget to show an editor for script code (Python, JavaScript, etc.)',
+      'description': 'Widget to show an editor for scripting code (Python, JavaScript, etc.)',
       'category': ['Common'],
       'iconImage': 'scriptengineeditor.png',
       'supportsAutoResize': true,
@@ -26,6 +26,17 @@ TW.IDE.Widgets.scriptengineeditor = function () {
           'isEditable': true,
           'defaultValue': false,
           'description': 'true to activate the debug'
+        },
+        'language': {
+          'isVisible': true,
+          'baseType': 'STRING',
+          'isEditable': true,
+          'defaultValue': 'python',
+          'description': 'the script language',
+          'selectOptions': [
+            {value: 'python', text: 'Python'},
+            {value: 'javascript', text: 'JavaScript'}
+          ]
         },
         parameters: {
           isBindingSource: true,
@@ -50,7 +61,7 @@ TW.IDE.Widgets.scriptengineeditor = function () {
           isVisible: true,
           'isEditable': true,
           isBindingTarget: true,
-          description: "the ScriptEngine code",
+          description: "the scripting code",
           defaultValue: '',
           baseType: 'STRING'
         }
@@ -69,6 +80,6 @@ TW.IDE.Widgets.scriptengineeditor = function () {
   };
 
   this.renderHtml = function () {
-    return '<div class="widget-content widget-scriptengineeditor">' + '<span class="scriptengineeditor-property">ScriptEngine Editor</span>' + '</div>';
+    return '<div class="widget-content widget-scriptengineeditor">' + '<span class="scriptengineeditor-property">Script Engine Editor</span>' + '</div>';
   };
 };
