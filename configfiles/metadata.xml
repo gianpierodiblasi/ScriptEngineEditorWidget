@@ -2,22 +2,22 @@
 <Entities>
   <ExtensionPackages>
     <ExtensionPackage 
-      name="PythonEditorWidget"
+      name="ScriptEngineEditorWidget"
       packageVersion="0.10.0"
       vendor="Accenture Italy - Industry X"
-      description="Extension to show a Python editor"
+      description="Extension to show an editor for script code (Python, JavaScript, etc.)"
       minimumThingWorxVersion="8.3.0"
-      dependsOn="PythonResource:0.13.1"> 
+      dependsOn="ScriptEngineResource:0.13.1"> 
     </ExtensionPackage>
   </ExtensionPackages>
   
   <Widgets>
-    <Widget name="pythoneditor">
+    <Widget name="scriptengineeditor">
       <UIResources>
-        <FileResource description="" file="pythoneditor.ide.js" isDevelopment="true" isRuntime="false" type="JS"/>
-        <FileResource description="" file="pythoneditor.ide.css" isDevelopment="true" isRuntime="false" type="CSS"/>
-        <FileResource description="" file="pythoneditor.runtime.js" isDevelopment="false" isRuntime="true" type="JS"/>
-        <FileResource description="" file="pythoneditor.runtime.css" isDevelopment="false" isRuntime="true" type="CSS"/>
+        <FileResource description="" file="scriptengineeditor.ide.js" isDevelopment="true" isRuntime="false" type="JS"/>
+        <FileResource description="" file="scriptengineeditor.ide.css" isDevelopment="true" isRuntime="false" type="CSS"/>
+        <FileResource description="" file="scriptengineeditor.runtime.js" isDevelopment="false" isRuntime="true" type="JS"/>
+        <FileResource description="" file="scriptengineeditor.runtime.css" isDevelopment="false" isRuntime="true" type="CSS"/>
       </UIResources>
     </Widget>
   </Widgets>

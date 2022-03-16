@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?> 
-<project name="PythonEditorWidget" basedir="." default="build"> 
+<project name="ScriptEngineEditorWidget" basedir="." default="build"> 
  
-  <property name="extension.jar" value="pythoneditorwidget.jar" /> 
+  <property name="extension.jar" value="scriptengineeditorwidget.jar" /> 
  
   <property name="target"         value="1.8" /> 
   <property name="source"         value="1.8" /> 

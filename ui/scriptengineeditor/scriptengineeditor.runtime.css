@@ -1,10 +1,10 @@
-.widget-pythoneditor {
+.widget-scriptengineeditor {
   display: flex;
   flex-direction: column;
   margin: 5px;
 }
 
-.widget-pythoneditor-ParametersTextArea, .widget-pythoneditor-PythonTextArea {
+.widget-scriptengineeditor-ParametersTextArea, .widget-scriptengineeditor-ScriptEngineTextArea {
   display: none;
   resize: none;
   font-size: 14px;
@@ -12,38 +12,38 @@
   white-space: nowrap
 }
 
-.widget-pythoneditor-ParametersTextArea {
+.widget-scriptengineeditor-ParametersTextArea {
   flex: 1;
 }
 
-.widget-pythoneditor-ParametersMonaco {
+.widget-scriptengineeditor-ParametersMonaco {
   flex: 1;
 }
 
-.widget-pythoneditor-ResultParameter {
+.widget-scriptengineeditor-ResultParameter {
   width: 30%;
   font-size: 14px;
   font-family: monospaced;
 }
 
-.widget-pythoneditor-PythonTextArea {
+.widget-scriptengineeditor-ScriptEngineTextArea {
   flex: 3;
 }
 
-.widget-pythoneditor-PythonMonaco {
+.widget-scriptengineeditor-ScriptEngineMonaco {
   flex: 3;
 }
 
-.widget-pythoneditor-top10 {
+.widget-scriptengineeditor-top10 {
   margin-top: 10px;
 }
 
-.widget-pythoneditor-label {
+.widget-scriptengineeditor-label {
   font-size: 16px;
   font-weight: 600;
 }
 
-.widget-pythoneditor-run {
+.widget-scriptengineeditor-run {
   font-size: 16px;
   font-weight: 600;
   padding: 10px 40px;
@@ -53,18 +53,18 @@
   color: white;
   cursor: pointer;
 }
-.widget-pythoneditor-run:hover {
+.widget-scriptengineeditor-run:hover {
   background: rgb(29, 95, 144);
 }
-.widget-pythoneditor-run-disabled {
+.widget-scriptengineeditor-run-disabled {
   background: gray;
   cursor: default;
 }
-.widget-pythoneditor-run-disabled:hover {
+.widget-scriptengineeditor-run-disabled:hover {
   background: darkgray;
 }
 
-.widget-pythoneditor-Result {
+.widget-scriptengineeditor-Result {
   font-size: 14px;
   font-family: monospaced;
 }

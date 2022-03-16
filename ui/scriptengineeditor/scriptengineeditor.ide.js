@@ -1,15 +1,15 @@
 /* global TW */
-TW.IDE.Widgets.pythoneditor = function () {
+TW.IDE.Widgets.scriptengineeditor = function () {
   this.widgetIconUrl = function () {
-    return '../Common/extensions/PythonEditorWidget/ui/pythoneditor/pythoneditor.png';
+    return '../Common/extensions/ScriptEngineEditorWidget/ui/scriptengineeditor/scriptengineeditor.png';
   };
 
   this.widgetProperties = function () {
     return {
-      'name': 'PythonEditor',
-      'description': 'Widget to show a Python editor',
+      'name': 'ScriptEngineEditor',
+      'description': 'Widget to show an editor for script code (Python, JavaScript, etc.)',
       'category': ['Common'],
-      'iconImage': 'pythoneditor.png',
+      'iconImage': 'scriptengineeditor.png',
       'supportsAutoResize': true,
       'properties': {
         'Width': {
@@ -50,7 +50,7 @@ TW.IDE.Widgets.pythoneditor = function () {
           isVisible: true,
           'isEditable': true,
           isBindingTarget: true,
-          description: "the Python code",
+          description: "the ScriptEngine code",
           defaultValue: '',
           baseType: 'STRING'
         }
@@ -69,6 +69,6 @@ TW.IDE.Widgets.pythoneditor = function () {
   };
 
   this.renderHtml = function () {
-    return '<div class="widget-content widget-pythoneditor">' + '<span class="pythoneditor-property">Python Editor</span>' + '</div>';
+    return '<div class="widget-content widget-scriptengineeditor">' + '<span class="scriptengineeditor-property">ScriptEngine Editor</span>' + '</div>';
   };
 };
