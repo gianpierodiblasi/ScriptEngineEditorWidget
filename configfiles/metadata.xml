@@ -3,7 +3,7 @@
   <ExtensionPackages>
     <ExtensionPackage 
       name="ScriptEngineEditorWidget"
-      packageVersion="0.10.0"
+      packageVersion="0.10.1"
       vendor="Accenture Italy - Industry X"
       description="Extension to show an editor for scripting code (Python, JavaScript, etc.)"
       minimumThingWorxVersion="8.3.0"

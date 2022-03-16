@@ -165,11 +165,22 @@ TW.Runtime.Widgets.scriptengineeditor = function () {
           thisWidget.setEnabled(true);
         };
 
+        var target;
+        var language = thisWidget.getProperty("language");
+        switch (language) {
+          case "python":
+            target = "execPython";
+            break;
+          case "javascript":
+            target = "execJavaScript";
+            break;
+        }
+
         var invoker = new ThingworxInvoker({
           entityType: 'Resources',
           entityName: 'ScriptEngineResource',
           characteristic: 'Services',
-          target: 'exec',
+          target: target,
           apiMethod: 'POST'
         });
 
