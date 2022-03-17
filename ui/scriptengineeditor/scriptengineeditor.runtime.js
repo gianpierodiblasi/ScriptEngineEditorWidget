@@ -13,6 +13,8 @@ TW.Runtime.Widgets.scriptengineeditor = function () {
   };
 
   this.renderHtml = function () {
+    var style = "background: url(../Common/extensions/ScriptEngineEditorWidget/ui/scriptengineeditor/" + thisWidget.getProperty("language") + ".png) no-repeat left center;padding-left:16px;";
+
     var html = '';
     html =
             '<div class="widget-content widget-scriptengineeditor widget-scriptengineeditor widget-scriptengineeditor-' + uid + '">' +
@@ -23,7 +25,7 @@ TW.Runtime.Widgets.scriptengineeditor = function () {
             '  <label class="widget-scriptengineeditor-label widget-scriptengineeditor-top10">Result Parameter</label>' +
             '  <input type="text" class="widget-scriptengineeditor-ResultParameter widget-scriptengineeditor-ResultParameter_' + uid + '"/>' +
             //
-            '  <label class="widget-scriptengineeditor-label widget-scriptengineeditor-top10">Code</label>' +
+            '  <label class="widget-scriptengineeditor-label widget-scriptengineeditor-top10" style="' + style + '">Code</label>' +
             '  <textarea class="widget-scriptengineeditor-ScriptEngineTextArea widget-scriptengineeditor-ScriptEngineTextArea_' + uid + '"></textarea>' +
             '  <div id="widget-scriptengineeditor-ScriptEngineMonaco_' + uid + '" class="widget-scriptengineeditor-ScriptEngineMonaco"></div>' +
             //
@@ -64,13 +66,14 @@ TW.Runtime.Widgets.scriptengineeditor = function () {
 
   function createEditors() {
     var language = thisWidget.getProperty("language");
+    var theme = thisWidget.getProperty("theme");
 
     try {
       parametersEditor = monaco.editor.create(document.getElementById('widget-scriptengineeditor-ParametersMonaco_' + uid), {
         value: "",
         language: 'json',
         scrollBeyondLastLine: false,
-        theme: 'vs',
+        theme: theme,
         minimap: {
           enabled: false
         }
@@ -80,7 +83,7 @@ TW.Runtime.Widgets.scriptengineeditor = function () {
         value: "",
         language: language,
         scrollBeyondLastLine: false,
-        theme: 'vs',
+        theme: theme,
         minimap: {
           enabled: false
         }
@@ -105,6 +108,8 @@ TW.Runtime.Widgets.scriptengineeditor = function () {
     if (updatePropertyInfo.TargetProperty === 'debugMode') {
       this.setProperty(updatePropertyInfo.TargetProperty, updatePropertyInfo.RawSinglePropertyValue);
     } else if (updatePropertyInfo.TargetProperty === 'language') {
+      this.setProperty(updatePropertyInfo.TargetProperty, updatePropertyInfo.RawSinglePropertyValue);
+    } else if (updatePropertyInfo.TargetProperty === 'theme') {
       this.setProperty(updatePropertyInfo.TargetProperty, updatePropertyInfo.RawSinglePropertyValue);
     } else if (updatePropertyInfo.TargetProperty === 'parameters') {
       this.setProperty(updatePropertyInfo.TargetProperty, updatePropertyInfo.RawSinglePropertyValue);

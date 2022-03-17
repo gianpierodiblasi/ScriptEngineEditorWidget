@@ -37,6 +37,19 @@ TW.IDE.Widgets.scriptengineeditor = function () {
             {value: 'python', text: 'Python'},
             {value: 'javascript', text: 'JavaScript'}
           ]
+        }
+        ,
+        'theme': {
+          'isVisible': true,
+          'baseType': 'STRING',
+          'isEditable': true,
+          'defaultValue': 'vs',
+          'description': 'the theme editor',
+          'selectOptions': [
+            {value: 'vs', text: 'Visual Studio'},
+            {value: 'vs-dark', text: 'Visual Studio Dark'},
+            {value: 'hc-black', text: 'High Contrast Black'}
+          ]
         },
         parameters: {
           isBindingSource: true,
