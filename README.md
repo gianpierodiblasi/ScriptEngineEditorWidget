@@ -15,6 +15,7 @@ To show the editor the extension uses the [Monaco Editor](https://microsoft.gith
 - parameters - JSON (default = {}): the parameters, represented as a JSON object containing numbers, strings, booleans and arrays of numbers, strings, booleans and arrays (recursively)
 - resultParameter - STRING ('result'): parameter name of the result value
 - code - STRING (no default value): the scripting code
+- showOnlyCode - BOOLEAN (default = false): true to show only the code editor
 
 ## Dependencies
 - ScriptEngineResource - [link](https://github.com/ThingWorx-Extensions/ScriptEngineResource)
