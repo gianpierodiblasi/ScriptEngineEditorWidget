@@ -18,23 +18,23 @@ TW.Runtime.Widgets.scriptengineeditor = function () {
     var html = '';
     html =
             '<div class="widget-content widget-scriptengineeditor widget-scriptengineeditor widget-scriptengineeditor-' + uid + '">' +
-            '  <label class="widget-scriptengineeditor-label">Parameters</label>' +
-            '  <textarea class="widget-scriptengineeditor-ParametersTextArea widget-scriptengineeditor-ParametersTextArea_' + uid + '"></textarea>' +
-            '  <div id="widget-scriptengineeditor-ParametersMonaco_' + uid + '" class="widget-scriptengineeditor-ParametersMonaco"></div>' +
+            '  <label class="widget-scriptengineeditor-label no-code">Parameters</label>' +
+            '  <textarea class="widget-scriptengineeditor-ParametersTextArea widget-scriptengineeditor-ParametersTextArea_' + uid + ' no-code"></textarea>' +
+            '  <div id="widget-scriptengineeditor-ParametersMonaco_' + uid + '" class="widget-scriptengineeditor-ParametersMonaco no-code"></div>' +
             //
-            '  <label class="widget-scriptengineeditor-label widget-scriptengineeditor-top10">Result Parameter</label>' +
-            '  <input type="text" class="widget-scriptengineeditor-ResultParameter widget-scriptengineeditor-ResultParameter_' + uid + '"/>' +
+            '  <label class="widget-scriptengineeditor-label widget-scriptengineeditor-top10 no-code">Result Parameter</label>' +
+            '  <input type="text" class="widget-scriptengineeditor-ResultParameter widget-scriptengineeditor-ResultParameter_' + uid + ' no-code"/>' +
             //
-            '  <label class="widget-scriptengineeditor-label widget-scriptengineeditor-top10" style="' + style + '">Code</label>' +
+            '  <label class="widget-scriptengineeditor-label widget-scriptengineeditor-top10 no-code" style="' + style + '">Code</label>' +
             '  <textarea class="widget-scriptengineeditor-ScriptEngineTextArea widget-scriptengineeditor-ScriptEngineTextArea_' + uid + '"></textarea>' +
             '  <div id="widget-scriptengineeditor-ScriptEngineMonaco_' + uid + '" class="widget-scriptengineeditor-ScriptEngineMonaco"></div>' +
             //
-            '  <div class="widget-scriptengineeditor-top10" style="text-align:right">' +
+            '  <div class="widget-scriptengineeditor-top10 no-code" style="text-align:right">' +
             '	   <div class="widget-scriptengineeditor-run widget-scriptengineeditor-run_' + uid + '">Run</div>' +
             '  </div>' +
             //
-            '  <label class="widget-scriptengineeditor-label widget-scriptengineeditor-top10">Result</label>' +
-            '  <input type="text" class="widget-scriptengineeditor-Result widget-scriptengineeditor-Result_' + uid + '" readonly/>' +
+            '  <label class="widget-scriptengineeditor-label widget-scriptengineeditor-top10 no-code">Result</label>' +
+            '  <input type="text" class="widget-scriptengineeditor-Result widget-scriptengineeditor-Result_' + uid + ' no-code" readonly/>' +
             '</div>';
     return html;
   };
@@ -61,6 +61,11 @@ TW.Runtime.Widgets.scriptengineeditor = function () {
       $(".widget-scriptengineeditor-ScriptEngineTextArea_" + uid).css("display", "block");
       thisWidget.addEvents();
       thisWidget.updateEditor();
+    }
+    
+    var showOnlyCode = thisWidget.getProperty("showOnlyCode");
+    if (showOnlyCode) {
+      $(".widget-scriptengineeditor-" + uid + " .no-code").css("display", "none");
     }
   };
 
@@ -118,6 +123,9 @@ TW.Runtime.Widgets.scriptengineeditor = function () {
       this.setProperty(updatePropertyInfo.TargetProperty, updatePropertyInfo.RawSinglePropertyValue);
       this.updateEditor();
     } else if (updatePropertyInfo.TargetProperty === 'code') {
+      this.setProperty(updatePropertyInfo.TargetProperty, updatePropertyInfo.RawSinglePropertyValue);
+      this.updateEditor();
+    } else if (updatePropertyInfo.TargetProperty === 'showOnlyCode') {
       this.setProperty(updatePropertyInfo.TargetProperty, updatePropertyInfo.RawSinglePropertyValue);
       this.updateEditor();
     }

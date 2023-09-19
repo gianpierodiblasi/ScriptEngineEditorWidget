@@ -35,7 +35,8 @@ TW.IDE.Widgets.scriptengineeditor = function () {
           'description': 'the script language',
           'selectOptions': [
             {value: 'python', text: 'Python'},
-            {value: 'javascript', text: 'JavaScript'}
+            {value: 'javascript', text: 'JavaScript'},
+            {value: 'sql', text: 'SQL'},
           ]
         }
         ,
@@ -77,6 +78,13 @@ TW.IDE.Widgets.scriptengineeditor = function () {
           description: "the scripting code",
           defaultValue: '',
           baseType: 'STRING'
+        },
+        'showOnlyCode': {
+          'isVisible': true,
+          'baseType': 'BOOLEAN',
+          'isEditable': true,
+          'defaultValue': false,
+          'description': 'true to show only the code editor'
         }
       }
     };
