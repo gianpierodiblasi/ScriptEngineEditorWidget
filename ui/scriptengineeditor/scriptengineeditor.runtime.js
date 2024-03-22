@@ -62,7 +62,7 @@ TW.Runtime.Widgets.scriptengineeditor = function () {
       thisWidget.addEvents();
       thisWidget.updateEditor();
     }
-    
+
     var showOnlyCode = thisWidget.getProperty("showOnlyCode");
     if (showOnlyCode) {
       $(".widget-scriptengineeditor-" + uid + " .no-code").css("display", "none");
@@ -186,6 +186,9 @@ TW.Runtime.Widgets.scriptengineeditor = function () {
             break;
           case "javascript":
             target = "execJavaScript";
+            break;
+          case "java":
+            target = "execJava";
             break;
         }
 

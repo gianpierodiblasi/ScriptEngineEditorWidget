@@ -7,7 +7,7 @@ TW.IDE.Widgets.scriptengineeditor = function () {
   this.widgetProperties = function () {
     return {
       'name': 'ScriptEngineEditor',
-      'description': 'Widget to show an editor for scripting code (Python, JavaScript, etc.)',
+      'description': 'Widget to show an editor for scripting code (Python, JavaScript, Java, etc.)',
       'category': ['Common'],
       'iconImage': 'scriptengineeditor.png',
       'supportsAutoResize': true,
@@ -36,7 +36,8 @@ TW.IDE.Widgets.scriptengineeditor = function () {
           'selectOptions': [
             {value: 'python', text: 'Python'},
             {value: 'javascript', text: 'JavaScript'},
-            {value: 'sql', text: 'SQL'},
+            {value: 'java', text: 'Java'},
+            {value: 'sql', text: 'SQL'}
           ]
         }
         ,

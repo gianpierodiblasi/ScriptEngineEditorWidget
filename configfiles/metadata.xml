@@ -3,11 +3,11 @@
   <ExtensionPackages>
     <ExtensionPackage 
       name="ScriptEngineEditorWidget"
-      packageVersion="1.1.3"
+      packageVersion="1.2.2"
       vendor="Gianpiero Di Blasi"
-      description="Extension to show an editor for scripting code (Python, JavaScript, etc.)"
+      description="Extension to show an editor for scripting code (Python, JavaScript, Java, etc.)"
       minimumThingWorxVersion="8.3.0"
-      dependsOn="ScriptEngineResource:1.0.0"> 
+      dependsOn="ScriptEngineResource:1.1.2"> 
     </ExtensionPackage>
   </ExtensionPackages>
   
